@@ -19,6 +19,7 @@
 
     fbq('init', '1291567026203099');
     fbq('init', '4494888827459495');
+    fbq('init', '24710384898589911');
     fbq('track', 'PageView');
     fbq('track', 'ViewContent');
   </script>
@@ -1689,6 +1690,13 @@
       const isTomorrow = start.getFullYear() === tomorrow.getFullYear() && start.getMonth() === tomorrow.getMonth() && start.getDate() === tomorrow.getDate();
       el.textContent = isTomorrow ? "Get It Tomorrow!" : `${start.getDate()} ${['January','February','March','April','May','June','July','August','September','October','November','December'][start.getMonth()]}`;
     })();
+  </script>
+  <script>
+    document.querySelectorAll('a[href*="vendblue.store"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        fbq('track', 'InitiateCheckout');
+      });
+    });
   </script>
 </body>
 </html>
