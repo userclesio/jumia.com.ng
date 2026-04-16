@@ -1692,11 +1692,13 @@
     })();
   </script>
   <script>
+    (function(){function getCookie(n){var v=document.cookie.match("(^|;) ?"+n+"=([^;]*)(;|$)");return v?v[2]:null;}function sendCAPI(e){fetch("/api/capi",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({event_name:e,event_source_url:window.location.href,client_user_agent:navigator.userAgent,fbp:getCookie("_fbp"),fbc:getCookie("_fbc")})});}sendCAPI("PageView");window.sendCAPI=sendCAPI;
     document.querySelectorAll('a[href*="vendblue.store"]').forEach(function(el) {
       el.addEventListener('click', function() {
         fbq('track', 'InitiateCheckout');
+        sendCAPI('InitiateCheckout');
       });
-    });
+    });})();
   </script>
 </body>
 </html>
