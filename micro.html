@@ -1504,7 +1504,7 @@
         </svg>
       </button>
 
-      <a href="checkout-micro" class="add-btn" aria-label="Add to Cart" target="_blank" rel="noopener noreferrer">
+      <a href="checkout-micro" class="add-btn" aria-label="Add to Cart">
         <svg class="cart-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M6 6h15l-2 9H7L6 6Z"></path>
           <path d="M6 6l-2-2H2"></path>
@@ -1694,7 +1694,7 @@
   </script>
   <script>
     (function(){function getCookie(n){var v=document.cookie.match("(^|;) ?"+n+"=([^;]*)(;|$)");return v?v[2]:null;}function sendCAPI(e){fetch("/api/capi",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({event_name:e,event_source_url:window.location.href,client_user_agent:navigator.userAgent,fbp:getCookie("_fbp"),fbc:getCookie("_fbc")})});}sendCAPI("PageView");window.sendCAPI=sendCAPI;
-    document.querySelectorAll('a[href*="vendblue.store"]').forEach(function(el) {
+    document.querySelectorAll('a[href*="checkout-micro"]').forEach(function(el) {
       el.addEventListener('click', function() {
         fbq('track', 'InitiateCheckout');
         sendCAPI('InitiateCheckout');
