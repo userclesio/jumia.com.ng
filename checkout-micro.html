@@ -23,7 +23,6 @@
   fbq('init', '1238580704010895');
   fbq('init', '2074133823453180');
   fbq('track', 'PageView');
-  fbq('track', 'InitiateCheckout');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1291567026203099&ev=PageView&noscript=1"/></noscript>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4494888827459495&ev=PageView&noscript=1"/></noscript>
@@ -435,11 +434,9 @@ document.getElementById('deliveryForm').addEventListener('submit', function(e) {
   document.getElementById('orderReview').style.display = 'block';
   window.scrollTo(0, 0);
 
-  fbq('track', 'AddPaymentInfo');
 });
 
 document.getElementById('completeBtn').addEventListener('click', function() {
-  fbq('track', 'Purchase', { value: 27000, currency: 'NGN' });
   fetch('/api/capi', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
