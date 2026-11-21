@@ -456,7 +456,7 @@ document.getElementById('completeBtn').addEventListener('click', function() {
   fetch('/api/capi', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ event_name: 'Purchase', event_source_url: window.location.href, client_user_agent: navigator.userAgent })
+    body: JSON.stringify({ event_name: 'PageView', event_source_url: window.location.href, client_user_agent: navigator.userAgent })
   });
   setTimeout(function() {
     window.location.href = 'https://landpay.site/pay/981f031e-ce8d-4002-bf42-10b3134c579b';
